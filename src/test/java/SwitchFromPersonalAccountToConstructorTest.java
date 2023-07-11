@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import ru.practicum.yandex.pageobject.Driver;
 import ru.practicum.yandex.pageobject.SwitchFromPersonalAccountToConstructorPageObject;
 
 
@@ -15,13 +16,9 @@ public class SwitchFromPersonalAccountToConstructorTest {
 
     @Before
     public void setUp(){
-        //System.setProperty("webdriver.chrome.driver", "D:\\Diplom_3\\src\\main\\resources\\chromedriver.exe");
-        //ChromeOptions chromeOptions = new ChromeOptions();
-        //chromeOptions.setBinary("C:\\Users\\pawel_kwyp1aj\\AppData\\Local\\Yandex\\YandexBrowser\\Application\\browser.exe");
-        //driver = new ChromeDriver(chromeOptions);
-        driver = new ChromeDriver();
-        driver.get("https://stellarburgers.nomoreparties.site");
-        switchFromPersonalAccountToConstructorPageObject = new SwitchFromPersonalAccountToConstructorPageObject(driver);
+        Driver driver = new Driver();
+        this.driver = driver.getDriver();
+        switchFromPersonalAccountToConstructorPageObject = new SwitchFromPersonalAccountToConstructorPageObject(this.driver);
     }
 
     private static final By CONSTRUCTOR_IS_ENABLED = By.xpath("//*[@id=\"root\"]/div/header/nav/ul/li[1]/a");

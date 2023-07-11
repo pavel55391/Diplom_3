@@ -31,8 +31,8 @@ public class LogInPageObject {
         driver.findElement(EMAIL_FIELD).sendKeys("pavelz_16@gmail.com");
         driver.findElement(PASSWORD_FIELD).sendKeys("123qaz123");
         driver.findElement(LOGIN_BUTTON).click();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(PERSONAL_ACCOUNT_BUTTON).click();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         return driver.findElement(EXPECTED_RESULT_TEXT).getText();
     }
 
@@ -41,8 +41,8 @@ public class LogInPageObject {
         driver.findElement(EMAIL_FIELD).sendKeys("pavelz_16@gmail.com");
         driver.findElement(PASSWORD_FIELD).sendKeys("123qaz123");
         driver.findElement(LOGIN_BUTTON).click();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(PERSONAL_ACCOUNT_BUTTON).click();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         return driver.findElement(EXPECTED_RESULT_TEXT).getText();
     }
 
@@ -53,8 +53,8 @@ public class LogInPageObject {
         driver.findElement(EMAIL_FIELD).sendKeys("pavelz_16@gmail.com");
         driver.findElement(PASSWORD_FIELD).sendKeys("123qaz123");
         driver.findElement(LOGIN_BUTTON).click();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(PERSONAL_ACCOUNT_BUTTON).click();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         return driver.findElement(EXPECTED_RESULT_TEXT).getText();
     }
 
@@ -65,8 +65,8 @@ public class LogInPageObject {
         driver.findElement(EMAIL_FIELD).sendKeys("pavelz_16@gmail.com");
         driver.findElement(PASSWORD_FIELD).sendKeys("123qaz123");
         driver.findElement(LOGIN_BUTTON).click();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(PERSONAL_ACCOUNT_BUTTON).click();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         return driver.findElement(EXPECTED_RESULT_TEXT).getText();
     }
 }

@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import ru.practicum.yandex.pageobject.Driver;
 import ru.practicum.yandex.pageobject.SuccessfulTegistrationPageObject;
 
 public class SuccessfulRegistrationTest {
@@ -13,13 +14,9 @@ public class SuccessfulRegistrationTest {
 
     @Before
     public void setUp() {
-        //System.setProperty("webdriver.chrome.driver", "D:\\Diplom_3\\src\\main\\resources\\chromedriver.exe");
-        //ChromeOptions chromeOptions = new ChromeOptions();
-        //chromeOptions.setBinary("C:\\Users\\pawel_kwyp1aj\\AppData\\Local\\Yandex\\YandexBrowser\\Application\\browser.exe");
-        //driver = new ChromeDriver(chromeOptions);
-        driver = new ChromeDriver();
-        driver.get("https://stellarburgers.nomoreparties.site/register");
-        successfulTegistrationPageObject = new SuccessfulTegistrationPageObject(driver);
+        Driver driver = new Driver();
+        this.driver = driver.getDriver();
+        successfulTegistrationPageObject = new SuccessfulTegistrationPageObject(this.driver);
     }
 
     @Test
